@@ -1,0 +1,28 @@
+{{template "header" .}}
+
+<script>
+window.onload = function() {
+    profile({{.Token}})
+}
+
+</script>
+            <div class="content">
+                <div>
+                    <div id="prifileContainer" style="float:left;margin:10px;">
+                        <div id="avatar" style="text-align:center;display:inline-block;margin-bottom:10px;width:200px;">
+                            <img src="/img/Portrait_placeholder.png" width="90px" height="110px">
+                        </div>
+                        <div id="name"></div>
+                        <div id="email"></div>
+                        <div id="settings" style="float:left">
+                            <input type="image" src="/img/settings.png" onclick="gotoProfileSettings({{.Token}})" style="width:10px;height:10px;"/>
+                        </div>
+                    </div>
+                    <div id="albumContainer" style="float:left;margin:10px;width:550px;">
+                        <h3>Albums</h2>
+                        <hr/>
+                        <div id="albums"></div>
+                    </div>
+                </div>
+            </div>
+{{template "footer" .}}

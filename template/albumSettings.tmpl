@@ -1,0 +1,32 @@
+{{template "header" .}}
+<script>
+window.onload = function() {
+    albumSettings({{.AlbumID}}, {{.Token}})
+}
+
+</script>
+            <div class="content">
+                <div class="middleMain">
+                    <b>앨범 수정</b>
+                    <form class="frm-form" action="javascript:albumUpdate()">
+                        <div class="frm-item">
+                            <span class="label">title</span>
+                            <input id="title" type="text" name="title"/>
+                        </div>
+                        <div class="frm-item">
+                            <span class="label">date</span>
+                            <input id="start_date" type="date" name="start_date"/>~
+                            <input id="end_date" type="date" name="end_date">
+                        </div>
+                        <div class="frm-item">
+                            <span class="label">desc</span>
+                            <input id="desc" type="text" name="desc" style="width:300px"/>
+                        </div>
+                        <input type="hidden" id="token" name="token" value={{.Token}}>
+                        <input type="hidden" id="albumid" name="albumid" value={{.AlbumID}}>
+                        <input type="submit" value="update"/>
+                        <input type="reset" value="cancel" />
+                    </form>
+                </div>
+            </div>
+{{template "footer" .}}

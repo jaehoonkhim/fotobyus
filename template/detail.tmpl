@@ -1,0 +1,28 @@
+{{template "header" .}}
+<script>
+window.onload = function() {
+    detail({{.ImageID}}, {{.Token}});
+}
+</script>
+
+            <div class="content">
+                <b><a href="/album/{{.AlbumID}}"><< Back</a></b>
+                <div class="main">
+                    <div id="content" style="margin-top: 10px; float:left; background-color:#FFFFF0; min-width:300px;">
+                    </div>
+                    <div id="comment" style="margin-top: 10px; margin-left: 10px; float:left; background-color:#F5F5F5; max-width:301px; min-height:100px;">
+                        <div id="in_comment" style="padding:2px;overflow:hidden">
+                            <form id="comment_form" method="post" action="javascript:sendComment()">
+                                <textarea id="comment_value" style="font-size:12px;min-width:293px;max-width:293px;min-height:90px;max-height:90px;resize:none" {{if not .Token}}disabled="disabled"{{end}}></textarea>
+                                <input type="hidden" id="imageid" name="imageid" value={{.ImageID}}>
+                                <input type="hidden" id="usertoken" name="usertoken" value={{.Token}}>
+                                <input type="hidden" id="albumid" name="albumid" value={{.AlbumID}}>
+                                <input type="submit" value="write" style="float:right" {{if not .Token}}disabled="disabled"{{end}}/>
+                            </form>
+                        </div>
+                        <div id="list_comment" style="padding:2px;overflow:hidden">
+                        </div>
+                    </div>
+                </div>
+            </div>
+{{template "footer" .}}

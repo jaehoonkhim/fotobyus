@@ -1,0 +1,5 @@
+application: fotobyus 
+dispatch:
+- url: "*/api"
+  module: api
+  

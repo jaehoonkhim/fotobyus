@@ -1,0 +1,19 @@
+{{template "header" .}}
+            <div class="content">
+                <div class="smallMain">
+                    <b>signin</b>
+                    <form class="frm-form" action="javascript:signin()">
+                        <div class="frm-item">
+                            <span class="label">ID</span>
+                            <input id="userid" type="text" name="userid"/>
+                        </div>
+                        <div class="frm-item">
+                            <span class="label">Password</span>
+                            <input id="pw" type="password" name="pw" />
+                        </div>
+                        <input type="submit" value="signin"/>
+                        <input type="reset" value="cancel" />
+                    </form>
+                </div>
+            </div>
+{{template "footer" .}}

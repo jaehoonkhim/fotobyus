@@ -1,0 +1,27 @@
+{{template "header" .}}
+<div class="content">
+    <div class="smallMain">
+        <b>signup</b>
+        <form class="frm-form" action="javascript:signup()">
+            <div id="frm-item">
+                <span class="label">Name</span>
+                <input id="username" type="text" name="username" required>
+            </div>
+            <div id="frm-item">
+                <span class="label">ID</span>
+                <input id="userid" type="text" name="userid" required>
+            </div>
+            <div id="frm-item">
+                <span class="label">Email</span>
+                <input id="email" type="text" name="email" required>
+            </div>
+            <div id="frm-item">
+                <span class="label">Password</span>
+                <input id="pw" type="password" name="pw" required>
+            </div>
+            <input type="button" value="signup" onclick="signup()"/>
+            <input type="reset" value="cancel" />
+        </form>
+    </div>
+</div>
+{{template "footer" .}}

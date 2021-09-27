@@ -1,0 +1,32 @@
+{{define "header"}}
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Foto</title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <script src="/js/album.js"></script>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="header">
+                <div class="logo">
+                    <a href="/">Foto</a>
+                </div>
+                <div class="info">
+                    <ul>
+                    {{if .Token}}
+                        <li><a href="/start">new</a></li> 
+                        <li><a href="/profile">profile</a></li>
+                        <li><a href="/signout">signout</a></li>
+                    {{else}}
+                        <li><a href="/signin">signin</a></li>
+                        <li><a href="/signup">signup</a></li>
+                    {{end}}
+                        <!--<li><a href="/guide">guide</a></li>-->
+                    </ul>
+                </div>
+            </div>
+
+{{end}}

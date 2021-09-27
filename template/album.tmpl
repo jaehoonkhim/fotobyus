@@ -1,0 +1,35 @@
+{{template "header" .}}
+<script>
+window.onload = function() {
+    album({{.AlbumID}}, {{.Token}});
+    images({{.AlbumID}}, {{.Token}});
+}
+</script>
+            <div class="content">
+                <div class="main">
+                    <div id="title"></div>
+                    <div id="date"></div>
+                    <div id="desc"></div>
+                    </br>
+                    <div id="tab" style="overflow:hidden">
+                        <div id="add" style="float:left">
+                            <form method="post" enctype="multipart/form-data" id="uploadForm">
+                                <input type="file" id="image" name="image" accept="image/jpeg" onchange="upload()">
+                                <input type="hidden" id="albumid" name="albumid" value={{.AlbumID}}>
+                                <input type="hidden" id="userkey" name="userkey" value={{.Token}}>
+                            </form>
+                        </div>
+                        <div id="settings" style="float:right;margin-right:10px">
+                            <button onclick="return gotoAlbumSettings({{.AlbumID}}, {{.Token}});"><img src="/img/settings.png" width="16px" height="16px"></button>
+
+                        </div>
+                    </div>
+                    <div style="clear:both"></div>
+                    <hr/>
+                </div>
+                <div id="imageContainer">
+                </div>
+            </div>
+            
+{{template "footer" .}}
+

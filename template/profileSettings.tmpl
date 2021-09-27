@@ -1,0 +1,53 @@
+{{template "header" .}}
+<script>
+window.onload = function() {
+    getProfileSettings({{.Token}})
+}
+
+var loadFile = function(event) {
+    var reader = new FileReader();
+    reader.onload = function() {
+        var output = document.getElementById('myPic');
+        output.src = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+};
+</script>
+
+
+<div class="content">
+    <div class="smallMain">
+        <b>Profile Settings</b>
+        <form class="frm-form">
+            <div id="avatar" style="margin-bottom:10px;width:200px;">
+                <img id="myPic" src="/img/Portrait_placeholder.png" width="90px" height="110px">
+                <input type="file" accept="image/*" onchange="loadFile(event)">
+            </div>
+            <div id="frm-item">
+                <span class="label">username</span>
+                <input id="username" type="text" name="username" required>
+            </div>
+            <div id="frm-item">
+                <span class="label">id</span>
+                <input id="userid" type="text" name="userid" required>
+            </div>
+            <div id="frm-item">
+                <span class="label">email</span>
+                <input id="email" type="text" name="email" required>
+            </div>
+            <div>
+                <input id="usertoken" type="hidden" name="usertoken" value={{.Token}}>
+            </div>
+            <!--<div id="frm-item">
+                <span class="label">password</span>
+                <input id="pw" type="password" name="pw" required>
+            </div>-->
+            <div id="frm-item" style="margin-top:10px;float:right">
+                <input type="button" value="settings" onclick="updateProfileSettings()"/>
+                <input type="button" value="cancel" onclick="gotoProfile()"/>
+            </div>
+        </form>
+    </div>
+</div>
+{{template "footer" .}}
+

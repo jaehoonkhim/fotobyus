@@ -1,0 +1,212 @@
+body {
+    background-color: #F8F8FF;
+    margin: 0;
+    padding 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button::-moz-focus-inner {
+    border: 0 none !important;
+    padding: 0 !important;
+}
+
+.wrap {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    font-size: 9pt;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    /*border-bottom:thin solid #000000;*/
+    background-color: #DDA0DD;
+    overflow: hidden;
+}
+
+.header a {
+    font-size: 13pt;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header li {
+    margin: 0 10px 0 0;
+    padding: 0 0 0 0;
+    border: 0;
+    float: left;
+}
+
+.logo {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    margin: 0px 0px 0px 20px;
+}
+
+.info {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    float: right;
+}
+
+.content {
+    width: 800px;
+    min-height: 600px;
+    overflow: hidden;
+    margin: 0 auto 0;
+    /*border: 1px solid red;*/
+}
+
+.search {
+    width: 100%;
+    height: 50px;
+    float: left;
+    margin: 0 auto;
+}
+
+.srchForm {
+    width: 300px;
+    height: "50px";
+    margin: 0 auto;
+}
+
+.startBanner {
+    width: 100%;
+    height: 100px;
+    float: left;
+    background-image: url("/img/familybb.png");
+    background-size: 100% 100px;
+}
+
+.startButton {
+    margin-left: 50px;
+    margin-top: 30px;
+    background: transparent;
+    font-size: 2em;
+    font-weight: 800;
+    border-color: #ffffff;
+    color: white;
+    border-style: solid
+}
+
+.travels {
+    width: 100%;
+    /*height:370px;*/
+    overflow: hidden;
+}
+
+.newTravels {
+    width: 600px;
+    /*height:370px;*/
+    float: left;
+}
+
+.trvl {
+    width: 190px;
+    height: 80px;
+    float: left;
+    margin: 3px;
+    border: 1px solid black;
+}
+
+.myTravels {
+    width: 200px;
+    height: 370px;
+    float: left;
+}
+
+.myTrvl {
+    width: 200px;
+    height: 180px;
+    margin: 10px 3px;
+    overflow: hidden
+}
+
+.myTitle {
+    width: 150px;
+    height: 20px;
+    float: left;
+    background-color: #cccccc;
+    border: 1px solid #000000;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    text-align: center;
+}
+
+.myTrvlItems {
+    width: 190px;
+    height: 130px;
+    float: left;
+    border: 1px solid #000000;
+}
+
+.myMore {
+    width: 90px;
+    height: 10px;
+    float: right;
+}
+
+#albums ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#albums li {
+    margin: 0 10px 10px 0;
+    padding: 0 0 0 0;
+    border: 1px solid #DCDCDC;
+}
+
+.main {
+    width: 100%;
+    overflow: hidden;
+}
+
+.middleMain {
+    width: 500px;
+    margin: 0 auto 0;
+}
+
+.smallMain {
+    width: 300px;
+    margin: 0 auto 0;
+}
+
+.label {
+    display: inline-block;
+    width: 100px;
+}
+
+.frm-item {
+    width: 100%;
+    margin: 3px;
+    float: left;
+}
+
+.footer {
+    width: 100%;
+    height: 70px;
+    /*border-top: thin solid #000000;*/
+    background-color: #A0DEDE;
+}
+
+.footer#comapny {
+    float: left
+}

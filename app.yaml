@@ -1,0 +1,28 @@
+application: fotobyus 
+version: 2 
+runtime: go
+api_version: go1
+
+handlers:
+# css 
+- url: /css
+  static_dir: static/css
+
+# js
+- url: /js
+  static_dir: static/js
+
+#img
+- url: /img
+  static_dir: static/img
+
+#favicon
+- url: /favicon\.ico
+  static_files: static/favicon/favicon.ico
+  upload: static/favicon/favicon\.ico
+
+
+
+# main
+- url: /.*
+  script: _go_app
